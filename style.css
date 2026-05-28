@@ -3,11 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Molle:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 
 :root{
     --fonte1: "Emilys Candy", serif;
     --fonte2: "Molle", cursive;
     --fonte3: "Sour Gummy", sans-serif;
+    --fonte4: "Agbalumo", system-ui;
+    
 }
 
 
@@ -69,6 +73,7 @@ nav > a{
     padding: 10px 15px;
     text-shadow: 5px 5px 8px black;
     white-space: nowrap;
+    font-family: var(--fonte4);
 }
 
 a:hover{
@@ -189,6 +194,7 @@ footer{
     text-align: center;
     font-size: 20px;
     flex-shrink: 0;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74);
 
 
 }
