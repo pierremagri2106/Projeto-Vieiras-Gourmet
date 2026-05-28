@@ -192,5 +192,34 @@ footer p
     color: black;
 }
 
+@media (max-width: 768px) {
+    
+    .foto1, .foto1.foto-inversa {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 95%; 
+        text-align: center;
+    }
 
+    
+    .foto-perfil {
+        width: 100%; 
+        max-width: 350px; 
+        height: auto;
+    }
+
+    
+    .bloco-texto {
+        text-align: center !important;
+        margin-top: 15px;
+    }
+
+    
+    .btn-top {
+        position: static; 
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
 
