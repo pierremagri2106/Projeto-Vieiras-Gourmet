@@ -55,16 +55,20 @@ header > p{
 
 nav {
     background-color: #734D1F;
-    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
     
     
 }
 nav > a{
     color: #F2DB94;
     text-decoration: none;
-    font-size: 25px;
-    padding-left: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
     text-shadow: 5px 5px 8px black;
+    white-space: nowrap;
 }
 
 a:hover{
