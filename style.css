@@ -5,204 +5,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
-
-:root{
+html {
+    scroll-behavior: smooth;
+}
+:root {
     --fonte1: "Emilys Candy", serif;
     --fonte2: "Molle", cursive;
     --fonte3: "Sour Gummy", sans-serif;
     --fonte4: "Agbalumo", system-ui;
-    
 }
 
+/* Reset Básico */
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; font-family: var(--fonte3); }
+main { flex: 1; }
 
-header{
-    background-color: #D9B36C;
-    padding: 30px 0;
-}
+/* Header e Nav */
+header { background-color: #D9B36C; padding: 30px 0; text-align: center; }
+h1 { font-family: var(--fonte1); font-size: 3.5em; margin: 0; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459); }
+#sub { font-family: var(--fonte1); font-weight: bolder; font-size: 35px; padding-top: 10px; color: black; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
 
-h1{
-    font-family:var(--fonte1);
-    font-size: 3.5em;
-    padding-top: 20px;
-    margin: 0;
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.342);
+nav { background-color: #734D1F; display: flex; flex-wrap: wrap; justify-content: center; padding: 10px; }
+nav a { color: #F2DB94; text-decoration: none; font-size: 20px; padding: 10px 15px; text-shadow: 5px 5px 8px black; font-family: var(--fonte4); }
+nav a:hover { color: #A6783F; text-decoration: underline; }
 
+/* Estilos de Botão */
+.btn-nav { padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); display: inline-block; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
+.btn-top { position: absolute; top: 200px; right: 20px; z-index: 1000; }
 
-}
+.btn-nav-menu { padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); display: inline-block; }
+.btn-top-menu { position: absolute; top: 200px; right: 20px; z-index: 1000; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
 
-h3{
-    font-family:var(--fonte3);
-    font-size: 2em;
-    font-weight: bold;
-    color: #ebdcaf;
-    text-shadow: 5px 5px 8px black;
-    
+.btn-bottom-menu{
 
-}
+padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); display: inline-block;
+ }
 
-#sub{
-    font-family: var(--fonte1);
-    font-weight: bolder;
-    font-size: 35px;
-    padding-top: 10px;
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.342);
-}
-
-
-header > h1{
-    text-align: center;
-}
-
-header > p{
-    text-align: center;
-}
-
-nav {
-    background-color: #734D1F;
+.container-acoes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    
-    
-}
-nav > a{
-    color: #F2DB94;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 15px;
-    text-shadow: 5px 5px 8px black;
-    white-space: nowrap;
-    font-family: var(--fonte4);
-}
-
-a:hover{
-    
-    color: #A6783F;
-    text-decoration:underline;
-    
-}
-
-main > p {
-    
-    padding-left: 50px;
-    display: inline-block;
-    
-    
-    
-}
-
-html, body{
-
-    height: 100%;
-    margin: 0;
-}
-
-body{
-
-    display: flex;
-    flex-direction: column;
-}
-
-main{
-
-    flex:1
+    flex-direction: column; /* Coloca um embaixo do outro */
+    align-items: center;    /* Centraliza horizontalmente */
+    gap: 15px;              /* Espaçamento entre os dois botões */
+    margin-bottom: 20px;    /* Espaço para não encostar no texto do rodapé */
 }
 
 
+.texto-baixar{
 
-h2{
+    text-align: center;
+    padding-top: 70px;
     font-family: var(--fonte3);
-    text-align: center;
-    font-size: 3em;
-    color: #F2DB94;
-    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74);
-    margin: 0;
-    padding: 30px 0;
-}
-
-img{
-    display: block;
-    max-width: 300px;
-    
-    
+    color:#ecd590;
+    font-size: 25px;
+    text-shadow: 5px 5px 8px black
 
 }
 
-.sabores{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-    padding: 50px 0;
-    
-}
+.lista-sabores{
 
-.sabor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-    margin-bottom: 20px;
-}
-
-.sabor img{
-
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    padding-left: 0;
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
     margin: 0 auto;
 
 }
 
-.sabor p{
+.lista-sabores li{
 
-    display: flex;      
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px dashed #F2DB94;
+    color: #F2DB94;
+    font-family: var(--fonte1);
+    font-size: 1.2em;
+    text-shadow: 5px 5px 8px black;
+    font-weight: bolder;
+
+}
+
+.preco-sabor {
+    font-weight: bolder;
+    color: #e6c257; /* Um destaque preço */
+}
+
+.lista-sabores li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Dá um brilho sutil quando passa o mouse */
+    cursor: pointer;}
+/* Seções de Fundo (Unificadas) */
+.fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte,fundo-historia1 {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+}
+
+
+
+.fundo-historia { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo5.webp); }
+.fundo-historia1 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo8.webp); }
+.fundo-menu { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(logo-sem-fundo.png); }
+.fundo-primeira-parte { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo1.webp); }
+.fundo-segunda-parte { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo2.webp); }
+
+/* Componentes */
+.sabor { display: flex; flex-direction: column; align-items: center; width: 250px; text-align: center; }
+
+.sabores {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: center; /* Centraliza os cards no meio da tela */
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 40px 20px;
+}
+
+.sabor img {
     width: 100%;
-    padding: 10px 0;
-    margin: 0;
+    height: 300px; /* Define uma altura fixa para todas ficarem iguais */
+    object-fit: cover; /* Corta a imagem sem distorcer para preencher o espaço */
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
 
-.fundo-primeira-parte{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo1.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    padding-bottom: 20px;
+.foto1 { display: flex; flex-direction: row; align-items: center; gap:40px; width: 80%; margin: 0 auto 40px auto; }
+.foto-historia {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
 }
 
-.fundo-segunda-parte{
-
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo2.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-
+.foto-inversa {
+    flex-direction: row-reverse; /* Isso coloca a imagem na direita */
 }
 
+/* Ajuste para o texto na versão inversa */
+.foto-inversa .bloco-texto {
+    text-align: right;
+}
 
+/* Regra para as fotos dos PRODUTOS (Menu/Início) */
+.foto-produto {
+    max-width: 300px; /* Mantém o tamanho que você queria antes */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
 
-
-
-footer{
+.texto{
 
     font-family: var(--fonte3);
-    background-color: #D9B36C;
-    text-align: center;
+    color:#ecd590;
     font-size: 20px;
-    flex-shrink: 0;
-    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74);
-
+    text-shadow: 5px 5px 8px black
+    
 
 }
 
-@media (max-width:600px){
-    .sabor {
-        width: 90% !important;
-    }
+.fundo-historia, .fundo-historia1 {
+    padding-bottom: 1px !important; /* Ajuste para o valor que você achar ideal */
 }
 
+h2 { font-family: var(--fonte3); text-align: center; font-size: 3em; color: #F2DB94; text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74); }
+h3 { color: #ebdcaf; font-size: 2em; text-shadow: 5px 5px 8px black; }
+
+/* Footer */
+footer { background-color: #D9B36C; text-align: center; padding: 20px 0; font-size: 20px; flex-shrink: 0; margin-top: auto; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
+
+/* Isso garante que o último elemento não empurre o rodapé para longe */
+main > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sabor, .foto1 { width: 90% !important; }
+    .btn-top { position: static; margin: 10px; }
+}
 
