@@ -158,7 +158,11 @@ background-size:20%;
 
 .fundo-primeira-parte-feedback2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(imagem-fundo-feedback2.webp); }
 
-
+.fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
+    background-size: cover !important;        /* Força a imagem a cobrir todo o espaço */
+    background-repeat: no-repeat !important; /* IMPEDE que a imagem se repita */
+    background-position: center center !important; /* Centraliza a imagem */
+}
 .container-avaliacao { max-width: 500px; margin: 40px auto; padding: 20px; color: #F2DB94; }
 
 /* Estilização das estrelas */
@@ -310,16 +314,10 @@ main > *:last-child {
 /* Responsividade */
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 600px) {
-    .fundo-historia, 
-    .fundo-menu, 
-    .fundo-primeira-parte, 
-    .fundo-segunda-parte, 
-    .fundo-historia1, 
-    .fundo-contato,
-    .fundo-primeira-parte-feedback, 
-    .fundo-primeira-parte-feedback2 {
+    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
         background-attachment: scroll !important;
         background-size: cover !important;
+        background-repeat: no-repeat !important; /* Essencial aqui também */
         background-position: center center !important;
     }
 
