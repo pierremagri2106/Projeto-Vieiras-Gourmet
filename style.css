@@ -300,7 +300,9 @@ main > *:last-child {
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 600px) {
 
-
+.fundo-primeira-parte {
+        background-size: 100% 100% !important; /* Ou use 'contain' se quiser ver a imagem toda */
+    }
     .fundo-historia, 
     .fundo-menu, 
     .fundo-primeira-parte, 
