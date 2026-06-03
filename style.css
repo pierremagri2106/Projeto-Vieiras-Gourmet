@@ -300,6 +300,20 @@ main > *:last-child {
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 600px) {
 
+
+    .fundo-historia, 
+    .fundo-menu, 
+    .fundo-primeira-parte, 
+    .fundo-segunda-parte, 
+    .fundo-historia1, 
+    .fundo-contato {
+        background-attachment: scroll !important; /* O 'scroll' faz a imagem rolar normal no celular */
+        background-size: cover !important;        /* Garante que ela se ajuste ao container */
+        background-position: center center !important;
+    }
+
+
+
     /* Ajuste do Header */
     h1 { font-size: 2em !important; }
     #sub { font-size: 20px !important; }
