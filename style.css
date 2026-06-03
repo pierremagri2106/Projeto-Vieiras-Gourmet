@@ -153,8 +153,68 @@ background-size:20%;
 .fundo-primeira-parte { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo1.webp); }
 .fundo-segunda-parte { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo2.webp); }
 
+
+.fundo-primeira-parte-feedback { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(imagem-fundo-feedback1.webp); }
+
+.fundo-primeira-parte-feedback2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(imagem-fundo-feedback2.webp); }
+
+
+.container-avaliacao { max-width: 500px; margin: 40px auto; padding: 20px; color: #F2DB94; }
+
+/* Estilização das estrelas */
+.estrelas { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 5px; font-size: 30px; }
+.estrelas input { display: none; }
+.estrelas label { color: #ccc; cursor: pointer; }
+
+/* Ao passar o mouse ou selecionar, a estrela fica dourada */
+.estrelas input:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label { color: #D9B36C; }
+
+/* Estilização do formulário */
+input, textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #734D1F; background: #fff; }
+
+
+
 /* Componentes */
 .sabor { display: flex; flex-direction: column; align-items: center; width: 250px; text-align: center; }
+
+
+.container-feedbacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+    padding: 40px 20px;
+    gap: 50px; /* Espaço entre um feedback e outro */
+}
+
+/* O bloco de cada feedback */
+.bloco-feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Limita a largura para não ficar gigante em telas grandes */
+}
+
+/* Controle exato do tamanho das fotos */
+.img-feedback {
+    width: 80%;       /* Ocupa 80% do bloco (você pode mudar para 500px, por exemplo) */
+    max-width: 500px; /* Tamanho máximo para não perder a qualidade */
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.texto-feedback {
+    font-family: var(--fonte3);
+    color: #ecd590;
+    font-size: 24px;
+    text-shadow: 3px 3px 5px black;
+    text-align: center;
+    margin: 5px 0;
+}
 
 .sabores {
     display: flex;
@@ -204,8 +264,19 @@ background-size:20%;
     font-family: var(--fonte3);
     color:#ecd590;
     font-size: 20px;
-    text-shadow: 5px 5px 8px black
+    text-shadow: 5px 5px 8px black;
     
+
+}
+
+.texto-feedback{
+
+font-family: var(--fonte3);
+    color:#ecd590;
+    font-size: 24px;
+    text-shadow: 5px 5px 8px black;
+    text-align: center;
+
 
 }
 
