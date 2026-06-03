@@ -158,10 +158,19 @@ background-size:20%;
 
 .fundo-primeira-parte-feedback2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(imagem-fundo-feedback2.webp); }
 
-.fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
+.fundo-historia, .fundo-menu, .fundo-segunda-parte, .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
     background-size: cover !important;        /* Força a imagem a cobrir todo o espaço */
     background-repeat: no-repeat !important; /* IMPEDE que a imagem se repita */
     background-position: center center !important; /* Centraliza a imagem */
+}
+
+.fundo-primeira-parte{
+
+    background-size: cover !important;        /* Força a imagem a cobrir todo o espaço */
+    background-repeat: no-repeat !important; /* IMPEDE que a imagem se repita */
+    background-position: center center !important; /* Centraliza a imagem */
+
+
 }
 .container-avaliacao { max-width: 500px; margin: 40px auto; padding: 20px; color: #F2DB94; }
 
@@ -312,80 +321,35 @@ main > *:last-child {
 
 /* Responsividade */
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
-@media (max-width: 600px) {
-    /* Ajustando os fundos para terem menos zoom */
-    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, 
-    .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
-        background-attachment: scroll !important; /* Desativa o fixed no celular */
-        background-repeat: no-repeat !important;   /* Força a não repetição */
-        
-        /* A MUDANÇA ESTÁ AQUI: */
-        background-size: contain !important;      /* Mostra a imagem inteira sem zoom, ajustando pela largura ou altura */
-        /* background-size: 100% auto !important; */ /* ALTERNATIVA: 100% da largura, altura automática */
-        background-color: #e6c257;
-        
-        background-position: center top !important; /* Centraliza horizontalmente e alinha no topo */
-        min-height: 300px; /* Garante uma altura mínima para a imagem aparecer */
-    }
-
-    /* Outros ajustes de responsividade que você já tinha */
-    h1 { font-size: 2em !important; }
-    #sub { font-size: 20px !important; }
-
-    .foto-historia, .foto-produto {
-        width: 90% !important;
-        height: auto !important;
-    }
-
-    .lista-sabores {
-        width: 95% !important;
-        font-size: 0.9em !important;
-    }
-
-    .btn-contato {
-        padding: 10px 20px !important;
-        width: 80%;
-        justify-content: center;
-    }
-
-    .foto1 {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 10px !important;
-    }
-}
 
 @media (max-width: 600px) {
+
+    
+
+
+    /* Seleciona TODOS os fundos de uma vez para não ter erro */
     .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, 
     .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
-        background-attachment: scroll !important; /* Desativa o fixed no celular */
-        background-repeat: no-repeat !important;   /* Força a não repetição */
-        background-size:cover !important;        /* Garante que cubra a tela */
+        background-attachment: scroll !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        /* Aumentamos o tamanho levemente (110%) para não sobrar espaços brancos 
+           mas com menos zoom que o 'cover' que corta muito a imagem */
+        background-size:cover !important; 
+        background-color: #e6c257; /* Cor de segurança caso a imagem não cubra tudo */
     }
 
+    #fundo-primeira-parte{
+
+        background-color:#a6783f9f;
+    }
+
+    /* Ajustes gerais de responsividade */
     h1 { font-size: 2em !important; }
     #sub { font-size: 20px !important; }
-
-    .foto-historia, .foto-produto {
-        width: 90% !important;
-        height: auto !important;
-    }
-
-    .lista-sabores {
-        width: 95% !important;
-        font-size: 0.9em !important;
-    }
-
-    .btn-contato {
-        padding: 10px 20px !important;
-        width: 80%;
-        justify-content: center;
-    }
-
-    .foto1 {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 10px !important;
-    }
+    .foto-historia, .foto-produto { width: 90% !important; height: auto !important; }
+    .lista-sabores { width: 95% !important; font-size: 0.9em !important; }
+    .btn-contato { padding: 10px 20px !important; width: 80%; justify-content: center; }
+    .foto1 { flex-direction: column !important; width: 100% !important; gap: 10px !important; }
 }
 
