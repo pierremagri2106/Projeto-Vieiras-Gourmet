@@ -18,7 +18,7 @@ html {
 /* Reset Básico */
 html, body { height: 100%; margin: 0; }
 body { display: flex; flex-direction: column; font-family: var(--fonte3); }
-main { flex: 1; }
+main { flex: 1; display: flex; flex-direction: column; }
 
 /* Header e Nav */
 header { background-color: #D9B36C; padding: 30px 0; text-align: center; }
@@ -49,6 +49,9 @@ padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: no
     margin-bottom: 20px;    /* Espaço para não encostar no texto do rodapé */
 }
 
+.container-contato {
+    margin: 0 auto;
+    padding: 0px 10px;}
 
 .texto-baixar{
 
@@ -93,15 +96,56 @@ padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: no
 .lista-sabores li:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Dá um brilho sutil quando passa o mouse */
     cursor: pointer;}
+
+    .bloco-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+
+.btn-contato {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 50px; /* Botão arredondado fica muito mais moderno */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contato img {
+    width: 30px;    /* Ajuste esse valor para o tamanho que achar melhor */
+    height: 30px;   /* Mantém a proporção quadrada */
+    margin-right: 10px; /* Dá um espacinho entre o ícone e o texto */
+    vertical-align: middle;}
+
+
+.zap { background-color: #25D366; }
+.insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+.btn-contato:hover { transform: scale(1.05); }
+
+
+
 /* Seções de Fundo (Unificadas) */
-.fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte,fundo-historia1 {
+.fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte,.fundo-historia1 {
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     padding: 60px 0;
 }
 
+.fundo-contato{
 
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(nutella.png);
+background-position: left center;
+background-size:20%;
+
+}
 
 .fundo-historia { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo5.webp); }
 .fundo-historia1 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fundo8.webp); }
@@ -169,11 +213,11 @@ padding: 10px 20px; background-color: #F2DB94; color: black; text-decoration: no
     padding-bottom: 1px !important; /* Ajuste para o valor que você achar ideal */
 }
 
-h2 { font-family: var(--fonte3); text-align: center; font-size: 3em; color: #F2DB94; text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74); }
+h2 { font-family: var(--fonte3); text-align: center; font-size: 3em; color: #F2DB94; text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.74); margin-top: 0;}
 h3 { color: #ebdcaf; font-size: 2em; text-shadow: 5px 5px 8px black; }
 
 /* Footer */
-footer { background-color: #D9B36C; text-align: center; padding: 20px 0; font-size: 20px; flex-shrink: 0; margin-top: auto; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
+footer { background-color: #D9B36C; text-align: center; padding: 40px 0; font-size: 20px; flex-shrink: 0; margin-top: auto; text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.459);}
 
 /* Isso garante que o último elemento não empurre o rodapé para longe */
 main > *:last-child {
