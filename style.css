@@ -322,6 +322,7 @@ main > *:last-child {
         /* A MUDANÇA ESTÁ AQUI: */
         background-size: contain !important;      /* Mostra a imagem inteira sem zoom, ajustando pela largura ou altura */
         /* background-size: 100% auto !important; */ /* ALTERNATIVA: 100% da largura, altura automática */
+        background-color: #e6c257;
         
         background-position: center top !important; /* Centraliza horizontalmente e alinha no topo */
         min-height: 300px; /* Garante uma altura mínima para a imagem aparecer */
@@ -359,7 +360,7 @@ main > *:last-child {
     .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
         background-attachment: scroll !important; /* Desativa o fixed no celular */
         background-repeat: no-repeat !important;   /* Força a não repetição */
-        background-size: cover !important;        /* Garante que cubra a tela */
+        background-size:cover !important;        /* Garante que cubra a tela */
     }
 
     h1 { font-size: 2em !important; }
