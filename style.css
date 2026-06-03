@@ -226,8 +226,43 @@ main > *:last-child {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .sabor, .foto1 { width: 90% !important; }
-    .btn-top { position: static; margin: 10px; }
+/* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 600px) {
+
+    /* Ajuste do Header */
+    h1 { font-size: 2em !important; }
+    #sub { font-size: 20px !important; }
+
+    /* Ajuste das fotos (História e Produtos) */
+    .foto-historia, .foto-produto {
+        width: 90% !important; /* Em vez de 500px, ocupa 90% da tela */
+        height: auto !important; /* Ajusta a altura proporcionalmente */
+    }
+
+    /* Ajuste da lista de sabores (Menu) */
+    .lista-sabores {
+        width: 95% !important;
+        font-size: 0.9em !important; /* Diminui um pouco a letra para não quebrar */
+    }
+
+    /* Ajuste dos botões de contato */
+    .btn-contato {
+        padding: 10px 20px !important;
+        width: 80%;
+        justify-content: center;
+    }
+
+    /* Ajuste do layout de fotos da página História */
+    .foto1 {
+        flex-direction: column !important; /* Coloca a foto em cima do texto no celular */
+        width: 100% !important;
+        gap: 10px !important;
+    }
+    
+    /* Garante que imagens de fundo não fiquem estranhas com o fixed no celular */
+    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1 {
+        background-attachment: scroll !important; /* O 'fixed' às vezes dá bug no mobile */
+        padding: 30px 0 !important;
+    }
 }
 
