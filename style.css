@@ -239,11 +239,10 @@ input, textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15
 
 
 .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
-    background-attachment: fixed;
     background-size: cover;
-    background-position: center center;
-    padding: 60px 0;
-    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat; /* Garante que não repita */
+    min-height: 400px; /* Garante altura mínima para ver a imagem */
 }
 
 
@@ -314,11 +313,11 @@ main > *:last-child {
 /* Responsividade */
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 600px) {
-    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
-        background-attachment: scroll !important;
-        background-size: cover !important;
-        background-repeat: no-repeat !important; /* Essencial aqui também */
-        background-position: center center !important;
+    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, 
+    .fundo-historia1, .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
+        background-attachment: scroll !important; /* Desativa o fixed no celular */
+        background-repeat: no-repeat !important;   /* Força a não repetição */
+        background-size: cover !important;        /* Garante que cubra a tela */
     }
 
     h1 { font-size: 2em !important; }
