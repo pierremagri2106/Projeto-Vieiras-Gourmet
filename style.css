@@ -232,6 +232,17 @@ input, textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15
     margin-bottom: 10px;
 }
 
+
+
+.fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    width: 100%;
+}
+
+
 .foto1 { display: flex; flex-direction: row; align-items: center; gap:40px; width: 80%; margin: 0 auto 40px auto; }
 .foto-historia {
     width: 500px;
@@ -299,57 +310,42 @@ main > *:last-child {
 /* Responsividade */
 /* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
 @media (max-width: 600px) {
-
-.fundo-primeira-parte {
-        background-size: 100% 100% !important; /* Ou use 'contain' se quiser ver a imagem toda */
-    }
     .fundo-historia, 
     .fundo-menu, 
     .fundo-primeira-parte, 
     .fundo-segunda-parte, 
     .fundo-historia1, 
-    .fundo-contato {
-        background-attachment: scroll !important; /* O 'scroll' faz a imagem rolar normal no celular */
-        background-size: cover !important;        /* Garante que ela se ajuste ao container */
+    .fundo-contato,
+    .fundo-primeira-parte-feedback, 
+    .fundo-primeira-parte-feedback2 {
+        background-attachment: scroll !important;
+        background-size: cover !important;
         background-position: center center !important;
     }
 
-
-
-    /* Ajuste do Header */
     h1 { font-size: 2em !important; }
     #sub { font-size: 20px !important; }
 
-    /* Ajuste das fotos (História e Produtos) */
     .foto-historia, .foto-produto {
-        width: 90% !important; /* Em vez de 500px, ocupa 90% da tela */
-        height: auto !important; /* Ajusta a altura proporcionalmente */
+        width: 90% !important;
+        height: auto !important;
     }
 
-    /* Ajuste da lista de sabores (Menu) */
     .lista-sabores {
         width: 95% !important;
-        font-size: 0.9em !important; /* Diminui um pouco a letra para não quebrar */
+        font-size: 0.9em !important;
     }
 
-    /* Ajuste dos botões de contato */
     .btn-contato {
         padding: 10px 20px !important;
         width: 80%;
         justify-content: center;
     }
 
-    /* Ajuste do layout de fotos da página História */
     .foto1 {
-        flex-direction: column !important; /* Coloca a foto em cima do texto no celular */
+        flex-direction: column !important;
         width: 100% !important;
         gap: 10px !important;
-    }
-    
-    /* Garante que imagens de fundo não fiquem estranhas com o fixed no celular */
-    .fundo-historia, .fundo-menu, .fundo-primeira-parte, .fundo-segunda-parte, .fundo-historia1 {
-        background-attachment: scroll !important; /* O 'fixed' às vezes dá bug no mobile */
-        padding: 30px 0 !important;
     }
 }
 
