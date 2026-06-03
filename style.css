@@ -239,9 +239,9 @@ input, textarea { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15
 
 
 .fundo-primeira-parte-feedback, .fundo-primeira-parte-feedback2 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Garante que não repita */
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important; /* Garante que não repita */
     min-height: 400px; /* Garante altura mínima para ver a imagem */
 }
 
